@@ -42,7 +42,7 @@ const limonCurrentBorg = countCurrentBorg(
   limonPercent,
   payDate
 );
-const totalBorg = moneyVeoCurrentBorg + limonCurrentBorg;
+const totalBorg = (moneyVeoCurrentBorg * 100 + limonCurrentBorg * 100) / 100;
 
 const buttonMoneyVeo = document.getElementById('buttonMoneyVeo');
 const buttonLimon = document.getElementById('buttonLimon');
