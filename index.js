@@ -1,17 +1,23 @@
-const moneyVeoBorg = 4727.49;
+// const moneyVeoBorg = 4727.49; // old
+
+const moneyVeoBorg = 3846.82; // total for 05 -3000.00 (pay) - 70.91 (fee)
 const moneyVeoFee = 70.91;
 const moneyVeoPercent = 2.5;
 
-const limonBorg = 5016;
+// const limonBorg = 5016; //old
+
+const limonBorg = 6271.17; // total for 05 - fee
 const limonFee = 50.16;
 const limonPercent = 1.5;
 
-const payDate = new Date('2024-06-20');
+// const payDate = new Date('2024-06-20'); // old
 
-const countCurrentBorg = (borg, fee, percent, startDate) => {
+const payDate = new Date('2024-07-05');
+
+function countCurrentBorg(borg, fee, percent, startDate) {
   const millisecondsInOneDay = 24 * 60 * 60 * 1000;
 
-  const today = new Date();
+  const today = new Date('2024-07-08');
   today.setUTCHours(0, 0, 0, 0);
 
   const daysDiff = (today - startDate) / millisecondsInOneDay;
@@ -28,7 +34,7 @@ const countCurrentBorg = (borg, fee, percent, startDate) => {
   const currentBorgRounded = Math.ceil(currentBorgWithFee * 100) / 100;
 
   return currentBorgRounded;
-};
+}
 
 const moneyVeoCurrentBorg = countCurrentBorg(
   moneyVeoBorg,
