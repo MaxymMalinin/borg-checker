@@ -14,10 +14,10 @@ const limonPercent = 1.5;
 
 const payDate = new Date('2024-07-05');
 
-function countCurrentBorg(borg, fee, percent, startDate) {
+const countCurrentBorg = (borg, fee, percent, startDate) => {
   const millisecondsInOneDay = 24 * 60 * 60 * 1000;
 
-  const today = new Date('2024-07-08');
+  const today = new Date();
   today.setUTCHours(0, 0, 0, 0);
 
   const daysDiff = (today - startDate) / millisecondsInOneDay;
@@ -34,7 +34,7 @@ function countCurrentBorg(borg, fee, percent, startDate) {
   const currentBorgRounded = Math.ceil(currentBorgWithFee * 100) / 100;
 
   return currentBorgRounded;
-}
+};
 
 const moneyVeoCurrentBorg = countCurrentBorg(
   moneyVeoBorg,
