@@ -1,18 +1,21 @@
 // const moneyVeoBorg = 4727.49; // old
+// const moneyVeoBorg = 3846.82; // old 2 // total for 2024-07-05 -3000.00 (pay) - 70.91 (fee)
 
-const moneyVeoBorg = 3846.82; // total for 05 -3000.00 (pay) - 70.91 (fee)
+const moneyVeoBorg = 8477.46; // total for 2024-08-06 - 70.91 (fee)
 const moneyVeoFee = 70.91;
 const moneyVeoPercent = 2.5;
 
 // const limonBorg = 5016; //old
+// const limonBorg = 6271.17; // old 2 // total for 2024-07-05 - 50.16 (fee)
 
-const limonBorg = 6271.17; // total for 05 - fee
+const limonBorg = 6648.62; // total for 2024-08-06 - 3450 (pay) - 50.16 (fee)
 const limonFee = 50.16;
 const limonPercent = 1.5;
 
 // const payDate = new Date('2024-06-20'); // old
+// const payDate = new Date('2024-07-05'); // old 2
 
-const payDate = new Date('2024-07-05');
+const payDate = new Date('2024-08-06');
 
 const countCurrentBorg = (borg, fee, percent, startDate) => {
   const millisecondsInOneDay = 24 * 60 * 60 * 1000;
